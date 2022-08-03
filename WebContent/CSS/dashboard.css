@@ -1,0 +1,46 @@
+#header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: cornflowerblue;
+}
+
+#header>h1{
+    position: absolute;
+    top: 0%;
+    left:10%;
+    color: azure;
+    cursor: none;
+    font-family: caligraphyFont;
+    font-size: 50px;
+    text-shadow: 0 0 10px #303030;
+
+}
+
+#logoutBtn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10%;
+    width: 10%;
+    height: 35%;
+    border-radius: 5vh;
+    outline: none;
+    border: none;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+#logoutBtn:hover{
+    box-shadow: 0 0 10px #303030;
+}
+#header>h1:hover{
+    text-shadow: 0 0 15px #303030;
+}
+
+@font-face {
+    font-family: caligraphyFont;
+    src: url(FONT/QazItalic-3zyWL.ttf);
+}

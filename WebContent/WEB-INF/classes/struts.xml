@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+
+<struts>
+	<package name="passLessAuth" extends="struts-default, json-default">
+		  
+		  <interceptors>
+	   		<interceptor name="userSession" class="com.Login.SessionInterceptor"></interceptor>
+		  </interceptors>
+		  
+		  <global-results>
+				<result name="loginUser" type="redirect">/login.jsp</result>
+		  </global-results>
+		 
+		 
+		 
+		  	<action name="sendotp" class="com.Authentication.OTPGeneration" method="sendEmail">
+			    <result type="json">
+			    	<param name="json">otpSentJson</param>
+			    </result>
+	    	</action>
+	    	<action name="validateotp" class="com.Authentication.validateOTP" method="checkOtp">
+			    <result type="json">
+			    	<param name="json">otpValidateJson</param>
+			    </result>
+	    	</action>
+	    	<action name="register" class="com.Registration.Register" method="execute">
+			    <result type="json">
+			    	<param name="json">RegistrationSuccessJson</param>
+			    </result>
+	    	</action>
+	    	<action name="finduser" class="com.Authentication.FindUser" method="execute">
+			    <result type="json">
+			    	<param name="json">noOfRecorsJson</param>
+			    </result>
+	    	</action>
+	    	<action name="getuser" class="com.Login.getUser" method="getUserDetails">
+	    		<interceptor-ref name="params"></interceptor-ref>
+	    		<interceptor-ref name="userSession"></interceptor-ref>
+	    		
+			    <result type="json">
+				    <param name="json">userDetailsJson</param>
+			    </result>
+			</action>
+	    	
+	    	
+	    	
+	    	<action name="login" class="com.Login.Login" method="addUserToSession">
+			   <result type="json">
+			    	<param name="json">loginSuccessJson</param>
+			    </result>
+	  		</action>
+	  		<action name="dashboard" class="com.Login.Login" method="getRestricted">
+			   <interceptor-ref name="userSession"></interceptor-ref>
+			   <result name="success">/dashboard.jsp</result>
+			</action>
+	  
+	  		<action name="logout" class="com.Login.Login" method="logout">
+	   			<result name="success">/login.jsp</result>
+   			</action>
+	</package>
+</struts>    

@@ -1,0 +1,61 @@
+#empty1{
+    position: absolute;
+    bottom: 0;
+    height: 40%;
+    left: 0;
+    width: 100%;
+    background-color: cornflowerblue;
+}
+#icon{
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+}
+/* 
+#empty2{
+    position: absolute;
+    width: 10%;
+    height: 25%;
+    border-radius: 50%;
+    background-color: cornflowerblue;
+    top: 55%;
+    left: 5;
+    rotate: 90deg;
+
+}
+#empty3{
+    position: absolute;
+    width: 10%;
+    height: 25%;
+    border-radius: 50%;
+    background-color: cornflowerblue;
+    top: 55%;
+    left: 20%;
+    rotate: 90deg;
+
+}
+
+#empty4{
+    position: absolute;
+    width: 10%;
+    height: 25%;
+    border-radius: 50%;
+    background-color: cornflowerblue;
+    top: 55%;
+    right: 20%;
+    rotate: 90deg;
+}
+#empty5{
+    position: absolute;
+    width: 10%;
+    height: 25%;
+    border-radius: 50%;
+    background-color: cornflowerblue;
+    top: 55%;
+    right: 5%;
+    rotate: 90deg;
+
+} */
